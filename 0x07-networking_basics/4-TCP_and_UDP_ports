@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-#Display listening sockets and PID/program name
-
-netstat -lp
