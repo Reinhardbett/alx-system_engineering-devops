@@ -16,3 +16,7 @@ $ apt-get install -y puppet
 ```
 $ gem install puppet-lint
 ```
+- Fix errors found
+```
+$ puppet-lint --fix /etc/puppet/modules
+```
