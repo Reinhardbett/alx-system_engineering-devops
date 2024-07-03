@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Create an RSA key pair protected by the passphrase betty
 
-ssh-keygen -t rsa -b 4096 -C "ubuntu@111545-web-01" -f /home/school -N "betty"
+ssh-keygen -t rsa -b 4096 -C "ubuntu@111545-web-01" -f school -N "betty"
