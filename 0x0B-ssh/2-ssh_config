@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Configure local machine to connect to server without password
+
+Host 100.25.148.169
+    HostName 111545-web-01
+    User ubuntu
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
