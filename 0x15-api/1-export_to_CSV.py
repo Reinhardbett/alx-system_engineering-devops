@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 '''This module creates a csv file for data retrieved from REST API
 '''
+import csv
 import json
 import requests
 import sys
-import csv
 
 if __name__ == "__main__":
     USER_ID = sys.argv[1]
