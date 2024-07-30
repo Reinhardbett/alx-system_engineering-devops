@@ -23,7 +23,15 @@ if __name__ == "__main__":
 
     filename = f"{USER_ID}.csv"
     with open(filename, 'w', newline='') as f:
-        write_csv = csv.DictWriter(f, fieldnames=["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"], quotechar='"', quoting=csv.QUOTE_ALL)
+        fieldnames = [
+            "USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"
+        ]
+        write_csv = csv.DictWriter(
+            f,
+            fieldnames,
+            quotechar='"',
+            quoting=csv.QUOTE_ALL
+        )
 
         for i in todos:
             TASK_COMPLETED_STATUS = i.get("completed")
