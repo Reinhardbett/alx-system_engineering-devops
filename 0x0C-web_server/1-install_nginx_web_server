@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Configuring new Ubuntu machine 
+
+# STEP 1 - make updates 
+apt-get update
+
+# install nginx -y yes to all promts
+apt-get -y install nginx
+
+# Nginx be listening to port 80
+ufw allow 'Nginx HTTP'
+
+# creating a page that contains the string Hello World!\
+echo "Hello World!" >> /var/www/html/index.html
+
+#start nginx without using the systemclt
+service nginx start
