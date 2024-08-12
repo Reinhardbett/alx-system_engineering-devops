@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# HAproxy, the load balancer
+
+# HAproxy installation
+sudo apt-get update
+sudo apt-get -y install haproxy
+
+# Configure to use roundrubin algorithm
+echo '
+frontend edisonasare.tech
+        bind 0:80
+        default_backend web_servers
+
+backend web_servers
+        balance roundrobin
+        server 66813-web-01 18.210.10.43:80
+        server 66813-web-02 18.209.223.134:80
+' >> /etc/haproxy/haproxy.cfg
+
+# enable haproxy to be started by init script
+
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
+
+# Restart HAproxy with service
+sudo service haproxy restart
