@@ -7,14 +7,14 @@ sudo apt-get -y install haproxy
 
 # Configure to use roundrubin algorithm
 echo '
-frontend edisonasare.tech
+frontend reinhardbett.tech
         bind 0:80
         default_backend web_servers
 
 backend web_servers
         balance roundrobin
-        server 66813-web-01 18.210.10.43:80
-        server 66813-web-02 18.209.223.134:80
+        server 111545-web-01 54.158.219.223:80
+        server 111545-web-02 100.25.31.47:80
 ' >> /etc/haproxy/haproxy.cfg
 
 # enable haproxy to be started by init script
